@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="googleTrends">
+<head>
+	<title>Google Trends</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+
+<h1>Enter a search term to See the prominence on Google</h1>
+<form ng-submit="getData(searchTerm)">
+	<input type="text" name="" ng-model="searchTerm">
+	<input type="submit" name="">
+</form>
+
+<div ng-repeat = "key in data">
+	<h3>{{data[0]}}</h3>
+</div>
+
+	<script type="text/javascript" src="./app.js"></script>
+	<script type="text/javascript" src="./mainCtrl.js"></script>
+	<script type="text/javascript" src="./mainServ.js"></script>
+</body>
+</html>
